@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;700&display=swap" rel="stylesheet">
+    <title>Spurious Correlation</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            color-scheme: light;
+            --font-family: "IBM Plex Mono", monospace;
+            --font-size: 18px;
+            --font-size-emphasis: 22px;
+            --font-weight-emphasis: 700;
+            --font-weight: 300;
+            --line-height: 1.5;
+            --background-color: hsl(0, 0%, 100%);
+            --foreground-color: hsl(0, 0%, 10%);
+            --foreground-color-emphasis: hsl(150, 75%, 25%);
+            --max-width-content: 75ch;
+            --spacing: calc(var(--line-height) * var(--font-size));
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+                --background-color: hsl(0, 0%, 10%);
+                --foreground-color: hsl(0, 0%, 90%);
+                --foreground-color-emphasis: hsl(120, 25%, 50%);
+            }
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: var(--font-size);
+            font-family: var(--font-family);
+            font-weight: var(--font-weight);
+            background-color: var(--background-color);
+            color: var(--foreground-color);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            text-wrap: pretty;
+            list-style: none;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing);
+        }
+
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--spacing);
+            max-width: var(--max-width-content);
+        }
+
+
+        .emphasis {
+            color: var(--foreground-color-emphasis);
+            font-size: var(--font-size-emphasis);
+            font-weight: var(--font-weight-emphasis);
+            text-align: center;
+        }
+
+        ul {
+            text-decoration: none;
+        }
+
+        ul li::before {
+            content: "* ";
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: var(--font-weight-emphasis);
+        }
+
+        a {
+            text-decoration: underline 1px var(--foreground-color);
+        }
+
+        @media (prefers-color-scheme: light) {
+            a:hover {
+                text-decoration: none;
+                background-color: hsla(0, 100%, 100%, 90%);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a:hover {
+                text-decoration: none;
+                background-color: hsla(0, 100%, 100%, 5%);
+            }
+        }
+    </style>
+    <main>
+
+        <h1 class="emphasis">p >= 0.05</h1>
+        <h2 class="emphasis">We are but a spurious correlation. Or aren't we?</h2>
+        <p>We are an independent group of scientists and engineers contributing to open source and open science.</p>
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="https://github.com/spuriouscorrelation" target="_blank">GitHub</a>
+            <li><a href="https://huggingface.co/spuriouscorrelation" target="_blank">HuggingFace</a>
+            <li><a href="mailto:aspuriouscorrelation@gmail.com" target="_blank">E-mail</a>
+        </ul>
+        <h3>Projects</h3>
+        <ul>
+            <li><a href="https://spuriouscorrelation.github.io/bertuguese" target="_blank">BERTuguese</a>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
